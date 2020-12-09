@@ -1,7 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
-import './json/product.json';
+// import './json/product.json';
 import App from './App';
 import * as serviceWorker from './serviceWorker';
 

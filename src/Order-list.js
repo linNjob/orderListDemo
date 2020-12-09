@@ -8,12 +8,19 @@ class OrderList extends Component {
     this.state = {};
   }
   render() {
+    const filterOrderStatus = (orders, orderStatus) => {
+      return orders.filter((item) => {
+        item.status.code === orderStatus[0] || item.status.code === orderStatus[1] ?
+          item.map(() => { OrderItem(item) })
+        : null
+      })
+    };
     return (
       <>
         <div className="title">進行中</div>
-        <ul className="order-list">{OrderItem(productData, [1, 2])}</ul>
+        <ul className="order-list">{ filterOrderStatus(productData.productData, [1,2]) }</ul>
         <div className="title">已完成</div>
-        <ul className="order-list">{OrderItem(productData, [3, 4])}</ul>
+        {/* <ul className="order-list">{ filterOrderStatus(productData.productData, [3, 4]) }</ul> */}
       </>
     );
   }
