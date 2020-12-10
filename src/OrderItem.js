@@ -1,6 +1,6 @@
 import React from "react";
 
-function OrderItem(item) {
+function OrderItem(item, isDisplayDate) {
   return <li>
     <i className="fas fa-angle-right"></i>
     <div className="img-box">
@@ -9,9 +9,11 @@ function OrderItem(item) {
     <div className="info-box">
       <div className="info-title">
         <span className="order-status">{item.status.type}</span>
-        {item.status.code === 1 || item.status.code === 2 ? (
+        { 
+          isDisplayDate ? 
           <span className="order-shipment">預計出貨：{item.date}</span>
-        ) : null}
+          : null
+        }
       </div>
       <div className="info-desc">{item.name}</div>
     </div>
