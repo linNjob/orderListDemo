@@ -1,7 +1,7 @@
 import React, { Component } from "react";
-import productData from "./data/product.js";
+import productData from "../../../data/product";
 import OrderItem from "./OrderItem.js";
-import { filterOrdersByStatus } from './unit.js';
+import { filterOrdersByStatus } from '../../units/unit';
 
 class OrderList extends Component {
   constructor(props) {
