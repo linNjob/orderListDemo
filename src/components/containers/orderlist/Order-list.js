@@ -9,13 +9,13 @@ class OrderList extends Component {
     this.state = {};
   }
   mapOrderStatus = (items, isDisplayDate) => {
-    return items.map((item) => {
-      return OrderItem(item, isDisplayDate)
+    return items.map((item, index) => {
+      return OrderItem(item, isDisplayDate, index)
     })
   }
   render() {
     const filterOrderIng = filterOrdersByStatus(productData.productData, [1, 2]);
-    const filterOrderDone = filterOrdersByStatus(productData.productData, [3, 4]);
+    const filterOrderDone = filterOrdersByStatus(productData.productData, [3,2,1]);
     return (
       <>
         <div className="title">進行中</div>

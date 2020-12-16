@@ -1,7 +1,7 @@
 import React from "react";
 
-function OrderItem(item, isDisplayDate) {
-  return <li>
+function OrderItem(item, isDisplayDate, index) {
+  return <li key={index}>
     <i className="fas fa-angle-right"></i>
     <div className="img-box">
       <img src={item.logo} alt="" />
