@@ -1,12 +1,19 @@
+// import logo from "./logo.svg";
 import React from 'react';
-import OrderList from './components/containers/orderlist/Order-list';
-import './App.css';
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+import OrderList from './components/OrderList';
+
+import "./App.css";
 
 function App() {
   return (
-    <main>
-      <OrderList />
-    </main>
+    <Provider store={store}>
+      <main>
+        <OrderList />
+      </main>
+    </Provider>
   );
 }
 

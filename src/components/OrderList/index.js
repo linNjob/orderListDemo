@@ -1,8 +1,9 @@
 import React, { Component } from "react";
 
-import productData from "../../../data/product";
+import productData from "../../reducers/data/product"
+// import productData from "../../../reducers/data/product";
 import OrderItem from "./OrderItem.js";
-import { filterOrdersByStatus } from '../../units/unit';
+import { filterOrdersByStatus } from './unit';
 
 
 class OrderList extends Component {
@@ -20,7 +21,7 @@ class OrderList extends Component {
   }
   render() {
     const filterOrderIng = filterOrdersByStatus(productData.productData, this.state.doing);
-    const filterOrderDone = filterOrdersByStatus(productData.productData, this.state.done);
+    // const filterOrderDone = filterOrdersByStatus(productData.productData, this.state.done);
     return (
       <>
         <div className="title">進行中 
@@ -34,7 +35,7 @@ class OrderList extends Component {
         </div>
         <ul className="order-list">{ this.mapOrderStatus(filterOrderIng, true) }</ul>
         
-        <div className="title">已完成 
+        {/* <div className="title">已完成 
           <input type="text" 
                 value={this.state.done}
                 onChange={(event) => {
@@ -43,7 +44,7 @@ class OrderList extends Component {
                   })
                 }} />
         </div>
-        <ul className="order-list">{ this.mapOrderStatus(filterOrderDone, false) }</ul>
+        <ul className="order-list">{ this.mapOrderStatus(filterOrderDone, false) }</ul> */}
       </>
     );
   }
