@@ -11,16 +11,8 @@ const todoReducer = (state = initialState, action) => {
         case CHANGE_TEXT:
             return {
                 ...state,
-                ...payload,
-                // input: {
-                //     inputValue: action.payload.input,
-                // },
-
-                // input: payload.input,
-
-                // ...payload.input
-                
-                // inputValue: payload.input,
+                //...payload,
+                inputValue: payload.inputValue,
             }
         default:
             return state;
