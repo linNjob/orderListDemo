@@ -1,15 +1,10 @@
 import { CHANGE_TEXT } from '../constants/actionType';
 
-// interface state {
-//     input: {
-//         title: any;
-//     }
-// }
+
 const initialState = {
-    input: {
-        title: '',
-    }
+    inputValue: '1'
 }
+
 const todoReducer = (state = initialState, action) => {
     const { type, payload } = action;
     switch (type) {
@@ -17,6 +12,15 @@ const todoReducer = (state = initialState, action) => {
             return {
                 ...state,
                 ...payload,
+                // input: {
+                //     inputValue: action.payload.input,
+                // },
+
+                // input: payload.input,
+
+                // ...payload.input
+                
+                // inputValue: payload.input,
             }
         default:
             return state;
