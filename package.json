@@ -1,20 +1,24 @@
 {
-  "name": "todolist02",
+  "name": "orderListDemo",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
-    "@testing-library/jest-dom": "^5.11.6",
+    "@testing-library/jest-dom": "^5.11.8",
     "@testing-library/react": "^11.2.2",
     "@testing-library/user-event": "^12.6.0",
+    "nodemon": "^2.0.6",
     "react": "^17.0.1",
     "react-dom": "^17.0.1",
     "react-redux": "^7.2.2",
     "react-scripts": "4.0.1",
     "redux": "^4.0.5",
-    "web-vitals": "^0.2.4"
+    "web-vitals": "^0.2.4",
+    "json-server": "^0.16.3",
+    "autod": "^3.1.1"
   },
   "scripts": {
     "start": "react-scripts start",
+    "server": "json-server src/reducers/json-server/db.json --port 3003",
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
