@@ -1,7 +1,8 @@
 import React, { Component } from "react";
 import { connect } from 'react-redux';
 
-import productData from "../../reducers/data/product"
+// import productData from "../../reducers/data/product";
+import productData from "../../reducers/json-server/db";
 
 import OrderItem from "./OrderItem.js";
 import { filterOrdersByStatus } from './unit';

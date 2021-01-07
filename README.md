@@ -17,7 +17,7 @@ The page will reload if you make edits.\
 You will also see any lint errors in the console.
 
 # 若使用測試的Json檔來獲取資料使用 執行node.js 
-### `npm server`
+### `npm run server`
 [http://localhost:3003]
 
 ### `npm test`
